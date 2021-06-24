@@ -121,13 +121,13 @@ function moveEnemy() {
 	enemy.forEach(item => {
 		let carRect = car.getBoundingClientRect()
 		let enemyRect = item.getBoundingClientRect()
+		console.log(carRect, enemyRect)
 		
 		if (carRect.top <= enemyRect.bottom &&
 			carRect.rigth >= enemyRect.left &&
 			carRect.left <= enemyRect.right &&
 			carRect.bottom >= enemyRect.top
 		) {
-			console.log(carRect, enemyRect)
 			setting.start = false
 			start.classList.remove('hide')
 			start.style.top = score.offsetHeight
