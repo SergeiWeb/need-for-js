@@ -55,7 +55,7 @@ function startGame() {
 	gameArea.appendChild(car)
 	car.style.left = gameArea.offsetWidth / 2 - car.offsetWidth / 2
 	car.style.top = 'auto'
-	car.style.bottom: '10px'
+	car.style.bottom = '10px'
 	setting.x = car.offsetLeft
 	setting.y = car.offsetTop
 	requestAnimationFrame(playGame)
