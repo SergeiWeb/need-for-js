@@ -50,7 +50,7 @@ function startGame() {
 		gameArea.appendChild(enemy)
 	}
 
-	settings.score = 0
+	setting.score = 0
 	setting.start = true
 	gameArea.appendChild(car)
 	car.style.left = gameArea.offsetWidth / 2 - car.offsetWidth / 2
@@ -63,8 +63,8 @@ function startGame() {
 
 function playGame() {
 	if (setting.start) {
-		settings.score = setting.speed
-		score.innerHTML = `SCORE<br/>${settings.score}`
+		setting.score = setting.speed
+		score.innerHTML = `SCORE<br/>${setting.score}`
 		
 		moveRoad()
 		moveEnemy()
@@ -127,7 +127,7 @@ function moveEnemy() {
 			carRect.left <= enemyRect.right &&
 			carRect.bottom >= enemyRect.top
 		) {
-			settings.start = false
+			setting.start = false
 			start.classList.remove('hide')
 			start.style.top = score.offsetHeight
 		}
