@@ -121,7 +121,10 @@ function moveEnemy() {
 	enemy.forEach(item => {
 		let carRect = car.getBoundingClientRect()
 		let enemyRect = item.getBoundingClientRect()
-		console.log(carRect, enemyRect)
+		console.log('1', carRect.top <= enemyRect.bottom)
+		console.log('2', carRect.rigth >= enemyRect.left)
+		console.log('3', carRect.left <= enemyRect.right)
+		console.log('4', carRect.bottom >= enemyRect.top)
 		
 		if (carRect.top <= enemyRect.bottom &&
 			carRect.rigth >= enemyRect.left &&
