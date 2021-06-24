@@ -63,7 +63,7 @@ function startGame() {
 
 function playGame() {
 	if (setting.start) {
-		setting.score = setting.speed
+		setting.score += setting.speed
 		score.innerHTML = `SCORE<br/>${setting.score}`
 		
 		moveRoad()
@@ -127,6 +127,7 @@ function moveEnemy() {
 			carRect.left <= enemyRect.right &&
 			carRect.bottom >= enemyRect.top
 		) {
+			console.log(carRect, enemyRect)
 			setting.start = false
 			start.classList.remove('hide')
 			start.style.top = score.offsetHeight
